@@ -9,43 +9,29 @@ export const WeatherTable = () => {
     console.log('teste', weatherData);
     return (
         <div className="row">
-            {/* <table>
+            <table>
                 <thead>
                     <tr>
                         <th></th>
-                        <th>city1</th>
-                        <th>city2</th>
-                        <th>city3</th>
+                        {weatherData.map(weather => <th key={weather.city_name}>{weather.city_name}</th>)}
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th>---</th>
-                        <td>---</td>
-                        <td>---</td>
-                        <td>---</td>
-                    </tr>
-                    <tr>
                         <th>temp</th>
-                        <td>city1temp</td>
-                        <td>city2temp</td>
-                        <td>city3temp</td>
+                        {weatherData.map(weather => <td key={weather.city_name}>{weather.temp}</td>)}
                     </tr>
                     <tr>
                         <th>sunrise</th>
-                        <td>city1sunrise</td>
-                        <td>city2sunrise</td>
-                        <td>city3sunrise</td>
+                        {weatherData.map(weather => <td key={weather.city_name}>{weather.sunrise}</td>)}
                     </tr>
                     <tr>
                         <th>sunset</th>
-                        <td>city1sunset</td>
-                        <td>city2sunset</td>
-                        <td>city3sunset</td>
+                        {weatherData.map(weather => <td key={weather.city_name}>{weather.sunset}</td>)}
                     </tr>
                 </tbody>
-            </table> */}
-            {weatherData.map(weather => weather.city_name)}
+            </table>
+
         </div>
     )
 }
