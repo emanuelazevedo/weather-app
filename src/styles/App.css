@@ -1,0 +1,50 @@
+body {
+    background-image: url('../external-content.duckduckgo.com.png');
+    /* height: 100%; */
+    /* background-position: center; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.weather-container {
+    border-radius: 15px;
+    height: 30rem;
+    background-color: rgb(101, 195, 216, 0.65);
+    color: white;
+        /* shadow */
+        -webkit-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.75);
+}
+
+.city-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.temp-container {
+    
+    /* div element */
+    width: 65%;
+    border-radius: 15px;
+    background-color: rgba(139, 168, 175, 0.65);
+    /* shadow */
+    -webkit-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 4px 3px 5px 0px rgba(0,0,0,0.75);
+}
+.temp-data {
+    font-size: 4rem;
+    text-shadow: 2px 2px #00000091;
+    font-weight: bold;
+}
+
+.weather-desc {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.sunset-sunrise {
+    font-size: 1.3rem;
+}
+

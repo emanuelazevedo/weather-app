@@ -1,15 +1,21 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
+import {Weather} from './Weather'
 
-export const WeatherTable = () => {
+export const WeatherList = () => {
 
     const { weatherData } = useContext(GlobalContext)
+
+    const weatherCities = weatherData.map(city =>
+        <Weather key={city.city_name} weather={city} />
+    );
 
     console.log('teste', weatherData);
     return (
         <div className="row">
-            <table>
+            {weatherCities}
+            {/* <table>
                 <thead>
                     <tr>
                         <th></th>
@@ -30,7 +36,8 @@ export const WeatherTable = () => {
                         {weatherData.map(weather => <td key={weather.city_name}>{weather.sunset}</td>)}
                     </tr>
                 </tbody>
-            </table>
+            </table> */}
+
 
         </div>
     )
