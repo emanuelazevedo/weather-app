@@ -10,6 +10,7 @@ export const Header = () => {
     const onSubmit = e => {
         e.preventDefault();
         addCity(cityName);
+        setCity('');
     }
 
     return (
