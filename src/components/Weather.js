@@ -1,10 +1,10 @@
 import React, { useEffect, useState} from 'react'
-import moment from 'moment'
 import mtz from 'moment-timezone'
 
 export const Weather = ({weather}) => {
     const [sunrise, setSunrise] = useState('');
     const [sunset, setSunset] = useState('');
+    // const [icon, setIcon] = useState();
 
 
     useEffect(() => {
@@ -16,7 +16,10 @@ export const Weather = ({weather}) => {
 
         setSunrise(sunrise);
         setSunset(sunset);
-    })
+        // const icon = require(`../icons/${weather.weather.icon}.png`);
+        // setIcon(icon);
+
+    }, [weather.timezone, weather.sunrise, weather.sunset])
 
     return (
         <div className="weather-container text-center col-3 m-5">
@@ -29,6 +32,7 @@ export const Weather = ({weather}) => {
                 </span>
             </div>
             <div className="weather-desc pt-5 ">
+                {/* <span><img src={icon} alt=""  /></span> */}
                 {weather.weather.description}
             </div>
             <div className="sunset-sunrise mt-5">
