@@ -32,7 +32,7 @@ export const Weather = ({weather}) => {
                 </span>
             </div>
             <div className="weather-desc ">
-                <div className="mx-auto"><img src={`/icons/${weather.weather.icon}.png`} alt=""  /></div>
+                <div className="mx-auto"><img src={`../icons/${weather.weather.icon}.png`} alt=""  /></div>
                 {weather.weather.description}
             </div>
             <div className="sunset-sunrise mt-4">
