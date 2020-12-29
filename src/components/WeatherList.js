@@ -11,7 +11,7 @@ export const WeatherList = () => {
         <Weather key={city.city_name} weather={city} />
     );
 
-    console.log('teste', weatherData);
+    // console.log('teste', weatherData);
     return (
         <div className="row">
             {weatherCities}

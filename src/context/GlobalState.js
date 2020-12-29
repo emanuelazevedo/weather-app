@@ -59,9 +59,9 @@ export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(WeatherReducer, initialState);
 
     async function addCity(cityName) {
-        console.log('1', cityName);
+        // console.log('1', cityName);
         const cityData =  await weatherAPI(cityName);
-        console.log('2', cityData)
+        // console.log('2', cityData)
         dispatch({
             type: 'ADD_CITY',
             payload: cityData
