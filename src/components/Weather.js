@@ -26,16 +26,16 @@ export const Weather = ({weather}) => {
             <div className="city-name mt-4">
                 {weather.city_name}
             </div>
-            <div className="temp-container my-5 mx-auto">
+            <div className="temp-container mb-3 mt-5 mx-auto">
                 <span className="temp-data">
                     {weather.temp}ºC
                 </span>
             </div>
-            <div className="weather-desc pt-5 ">
-                {/* <span><img src={icon} alt=""  /></span> */}
+            <div className="weather-desc ">
+                <div className="mx-auto"><img src={`/icons/${weather.weather.icon}.png`} alt=""  /></div>
                 {weather.weather.description}
             </div>
-            <div className="sunset-sunrise mt-5">
+            <div className="sunset-sunrise mt-4">
                 <span className="sunrise mr-3">
                     <label>Sunrise:</label> {sunrise}
                 </span>
