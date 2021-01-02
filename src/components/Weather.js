@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from 'react'
 import mtz from 'moment-timezone'
+import {ImageIcons} from './ImageIcons'
 
 export const Weather = ({weather}) => {
     const [sunrise, setSunrise] = useState('');
@@ -32,7 +33,7 @@ export const Weather = ({weather}) => {
                 </span>
             </div>
             <div className="weather-desc ">
-                <div className="mx-auto"><img src={`../icons/${weather.weather.icon}.png`} alt=""  /></div>
+                <ImageIcons icon = {weather.weather.icon}/>
                 {weather.weather.description}
             </div>
             <div className="sunset-sunrise mt-4">
